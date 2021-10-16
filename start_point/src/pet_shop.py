@@ -1,5 +1,5 @@
 # WRITE YOUR FUNCTIONS HERE
-
+# import pdb
 def get_pet_shop_name (name):
 
 
@@ -16,6 +16,29 @@ def get_pets_sold(sold):
 
 def increase_pets_sold(initial_sold,new_sold):
     initial_sold["admin"]["pets_sold"] = new_sold + initial_sold["admin"]["pets_sold"]
+
+def get_stock_count(stock):
+    stocklist = stock["pets"]
+
+    counter = 0
+    
+    for animal in stocklist:
+
+     counter += 1
+    return counter
+
+def get_pets_by_breed(pet, breed):
+    animal_list = pet["pets"]
+    pet_list = []
+
+    for animals in animal_list:
+        if animals["breed"] == breed:
+          
+          pet_list.append(animals)
+
+    return pet_list 
+
+
 
 
 
