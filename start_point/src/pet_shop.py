@@ -38,8 +38,25 @@ def get_pets_by_breed(pet, breed):
 
     return pet_list 
 
+def find_pet_by_name(pet, name):
+    list_of_pets = pet["pets"]
+    pet_list = {}
 
+    
+    for pets in list_of_pets:
+       if pets["name"] == name:
+         pet_list = pets
+         return pet_list
+        
 
+def remove_pet_by_name(pet_shop, name):
+    # list_of_pets = pet_shop["pets"]
+
+    for animals in pet_shop["pets"]:
+        # print(animals)
+        
+        if animals["name"] == name:
+          pet_shop["pets"].remove(animals)
 
 
 
