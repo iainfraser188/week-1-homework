@@ -92,7 +92,7 @@ def customer_can_afford_pet(customer, new_pet_cost):
     else :
       return False
 
-def does_pet_exsist(pet_name):
+def does_pet_exist(pet_name):
     if pet_name == None:
         return False
     
@@ -100,7 +100,7 @@ def does_pet_exsist(pet_name):
         return True        
 
 def sell_pet_to_customer(shop,pet,customer):
-      if does_pet_exsist(pet) == True:
+      if does_pet_exist(pet) == True:
        if customer_can_afford_pet(customer,pet) == True:
         add_pet_to_customer(customer,pet)
         increase_pets_sold(shop,1)
